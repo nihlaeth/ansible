@@ -21,14 +21,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this software.  If not, see <http://www.gnu.org/licenses/>.
 
-import re
-import glob
-import platform
-from distutils.version import LooseVersion
-
-# import module snippets
-from ansible.module_utils.basic import *
-
 ANSIBLE_METADATA = {'status': ['preview'],
                     'supported_by': 'community',
                     'version': '1.0'}
@@ -89,6 +81,14 @@ EXAMPLES = '''
     name: foo
     state: latest
 '''
+
+import re
+import glob
+import platform
+from distutils.version import LooseVersion
+
+# import module snippets
+from ansible.module_utils.basic import *
 
 
 def query_package(name):
